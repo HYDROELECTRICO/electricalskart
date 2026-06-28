@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="google-site-verification" content="vxt5M38VbkDVTkS9C0qjCkkgYLRIJto6YALamxPJg_4"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog – Water Purifier, Electricals & Appliances | ElectricalsKart</title>
+  <meta name="description" content="View product features, specifications, warranty and availability in Surat. Order water purifiers, RO filters, electricals and appliances on WhatsApp from ElectricalsKart."/>
+  <meta property="og:type" content="product"/>
+  <meta property="og:site_name" content="ElectricalsKart"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='6' fill='%231a56c4'/%3E%3Cpolygon points='13,4 15,10 13,10 15,22 11,13 13,13 11,4' fill='%23FFD700'/%3E%3C/svg%3E"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    body { background: var(--gray-50); }
+    .breadcrumb-bar { background: #fff; border-bottom: 1px solid var(--gray-200); padding: 12px 24px; }
+    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; font-size: 13px; color: var(--gray-400); }
+    .breadcrumb-inner a { color: var(--blue-mid); }
+    .breadcrumb-inner a:hover { text-decoration: underline; }
+    .product-layout { max-width: 1200px; margin: 30px auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+    .main-img { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius); height: 380px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); position: relative; overflow: hidden; font-size: 60px; }
+    .main-img img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+    .img-badge { position: absolute; top: 16px; left: 16px; background: #dc2626; color: #fff; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 6px; text-transform: uppercase; }
+    .thumb-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+    .thumb { width: 70px; height: 70px; background: var(--white); border: 2px solid var(--gray-200); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; overflow: hidden; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb:hover, .thumb.active { border-color: var(--blue-mid); }
+    .prod-brand-tag { display: inline-block; background: var(--blue-light); color: var(--blue-mid); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .prod-title { font-size: clamp(20px, 3vw, 26px); font-weight: 800; color: var(--gray-800); line-height: 1.3; margin-bottom: 10px; }
+    .prod-cat-row { font-size: 13px; color: var(--gray-400); margin-bottom: 16px; }
+    .prod-cat-row a { color: var(--blue-mid); }
+    .prod-price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+    .prod-price-main { font-size: 32px; font-weight: 900; color: var(--blue-dark); }
+    .prod-price-was { font-size: 16px; color: var(--gray-400); text-decoration: line-through; }
+    .prod-price-save { font-size: 13px; font-weight: 700; color: #16a34a; background: #dcfce7; padding: 3px 10px; border-radius: 20px; }
+    .prod-availability { font-size: 13px; color: #16a34a; font-weight: 600; margin-bottom: 20px; }
+    .prod-availability.out { color: #dc2626; }
+    .color-section { margin-bottom: 18px; }
+    .color-section label { font-size: 12px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 8px; }
+    .cd-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .cd { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid var(--gray-200); transition: all 0.2s; }
+    .cd.active, .cd:hover { border-color: var(--blue-mid); transform: scale(1.12); }
+    .color-name { font-size: 13px; color: var(--gray-600); margin-top: 6px; }
+    .order-section { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+    .order-section h4 { font-size: 13px; font-weight: 700; color: var(--gray-600); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .qty-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .qty-row label { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+    .qty-input { display: flex; align-items: center; border: 1.5px solid var(--gray-200); border-radius: 8px; overflow: hidden; }
+    .qty-btn { width: 36px; height: 36px; background: #fff; border: none; cursor: pointer; font-size: 18px; color: var(--gray-600); }
+    .qty-btn:hover { background: var(--blue-light); color: var(--blue-mid); }
+    .qty-num { width: 46px; text-align: center; font-size: 15px; font-weight: 700; border: none; outline: none; font-family: inherit; background: #fff; }
+    .btn-add-cart { width: 100%; background: var(--gold); color: var(--blue-dark); border: none; border-radius: 9px; padding: 14px; font-size: 15px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; transition: all 0.2s; }
+    .btn-add-cart:hover { background: #e09010; }
+    .btn-order-wa { width: 100%; background: var(--green-wa); color: #fff; border: none; border-radius: 9px; padding: 14px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
+    .btn-order-wa:hover { background: var(--green-wa-dark); }
+    .btn-call-order { width: 100%; background: var(--blue-dark); color: #fff; border: none; border-radius: 9px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .btn-call-order:hover { background: var(--blue-mid); }
+    .specs-card, .desc-card { background: #fff; border: 1.5px solid var(--gray-200); border-radius: var(--radius); padding: 22px; margin-bottom: 16px; }
+    .specs-card h4, .desc-card h4 { font-size: 14px; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--gray-200); }
+    .spec-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 13px; gap: 12px; }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { color: var(--gray-600); font-weight: 500; }
+    .spec-val { color: var(--gray-800); font-weight: 600; text-align: right; }
+    .desc-card p { font-size: 14px; color: var(--gray-600); line-height: 1.8; }
+    .desc-card ul { margin-top: 12px; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+    .desc-card ul li { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+    .related-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 24px; }
+    .related-section h2 { font-size: 22px; font-weight: 800; margin-bottom: 20px; }
+    .not-found { max-width: 600px; margin: 80px auto; text-align: center; padding: 0 24px; }
+    .not-found h1 { font-size: 28px; margin-bottom: 12px; }
+    .not-found p { color: var(--gray-600); margin-bottom: 24px; }
+    @media (max-width: 768px) { .product-layout { grid-template-columns: 1fr; } .main-img { height: 300px; } }
+  </style>
+</head>
+<body>
+
+<a class="float-wa" href="https://wa.me/919265560630" target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<header id="siteHeader"></header>
+
+<div id="pageRoot">
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner" id="breadcrumb">Loading...</div>
+  </div>
+  <div class="product-layout" id="productLayout"></div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;" id="descSection"></div>
+  <div class="related-section" id="relatedSection" style="display:none;">
+    <h2>Related Products</h2>
+    <div class="prod-grid" id="relatedGrid"></div>
+  </div>
+  <div class="recent-section" style="display:none;max-width:1200px;margin:0 auto;">
+    <h2 data-i18n="recentTitle">👀 Recently Viewed Products</h2>
+    <div class="prod-grid" id="recentGrid"></div>
+  </div>
+</div>
+
+<footer class="site-footer" id="siteFooter"></footer>
+
+<script src="common.js"></script>
+<script>
+  let currentProduct = null;
+  let selectedVariant = 0;
+  let allProducts = [];
+
+  const CAT_SLUG = {
+    'water purifiers': 'water-purifiers', 'wires & cables': 'wires',
+    'switches & sockets': 'switches', 'mcb / db panels': 'mcb',
+    'lights & led': 'lights', 'fans': 'fans', 'home automation': 'home-automation'
+  };
+  function catSlug(category) { return CAT_SLUG[(category || '').toLowerCase()] || 'products'; }
+
+  function showNotFound() {
+    document.getElementById('pageRoot').innerHTML =
+      '<div class="not-found"><h1>Product Not Found</h1><p>The product you are looking for does not exist or has been removed.</p><a href="products.html" class="btn-dark">← Browse All Products</a></div>';
+    document.title = 'Product Not Found – ElectricalsKart';
+  }
+
+  /* ── SEO: dynamic meta + Product JSON-LD (Google rich results + AI/LLM search) ── */
+  function injectProductSEO(product) {
+    const url = CONFIG.domain + '/product-detail.html?id=' + product.id;
+    document.title = (product.seo_title || (product.name + ' | ElectricalsKart Catalog'));
+
+    function setMeta(attr, name, content) {
+      var el = document.querySelector('meta[' + attr + '="' + name + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
+      el.setAttribute('content', content);
+    }
+    var desc = ((product.description || '') + ' Buy online in Surat from ElectricalsKart with WhatsApp ordering, delivery and service support.').slice(0, 158);
+    setMeta('name', 'description', desc);
+    setMeta('property', 'og:title', product.name + ' | ElectricalsKart Surat');
+    setMeta('property', 'og:description', desc);
+    setMeta('property', 'og:image', product.variants[0].image);
+    setMeta('property', 'og:url', url);
+    setMeta('name', 'keywords', product.name + ', ' + product.brand + ', ' + product.category + ', catalog Surat, ElectricalsKart');
+
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = url;
+
+    /* Product schema */
+    var schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      'name': product.name,
+      'description': product.description,
+      'image': product.variants.map(function(v) { return v.image; }),
+      'brand': { '@type': 'Brand', 'name': product.brand },
+      'category': product.category,
+      'sku': product.slug || ('EK-' + product.id),
+    };
+    if (product.warranty) {
+      schema.additionalProperty = [{ '@type': 'PropertyValue', 'name': 'Warranty', 'value': product.warranty }];
+    }
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(schema);
+    document.head.appendChild(s);
+
+    /* Breadcrumb schema */
+    var bc = document.createElement('script');
+    bc.type = 'application/ld+json';
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': CONFIG.domain + '/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': CONFIG.domain + '/products.html' },
+        { '@type': 'ListItem', 'position': 3, 'name': product.category, 'item': CONFIG.domain + '/products.html?cat=' + catSlug(product.category) },
+        { '@type': 'ListItem', 'position': 4, 'name': product.name, 'item': url }
+      ]
+    });
+    document.head.appendChild(bc);
+  }
+
+  function renderProduct(product) {
+    currentProduct = product;
+    selectedVariant = 0;
+    const variant = product.variants[0];
+    injectProductSEO(product);
+
+    const slug = catSlug(product.category);
+    document.getElementById('breadcrumb').innerHTML =
+      '<a href="index.html">Home</a> › <a href="products.html">Products</a> › ' +
+      '<a href="products.html?cat=' + slug + '">' + product.category + '</a> › ' + product.name;
+
+    const thumbs = product.variants.map(function(v, i) {
+      return '<div class="thumb' + (i === 0 ? ' active' : '') + '" onclick="selectVariant(' + i + ')" title="' + v.color + '">' +
+        '<img src="' + v.image + '" alt="' + escAttr(product.name + ' ' + (v.color || '')) + '" onerror="this.parentElement.textContent=\'💧\'"/></div>';
+    }).join('');
+
+    const colorDots = product.variants.map(function(v, i) {
+      return '<div class="cd' + (i === 0 ? ' active' : '') + '" style="background:' + colorToHex(v.color) + '" title="' + v.color + '" onclick="selectVariant(' + i + ')"></div>';
+    }).join('');
+
+    const specs = [
+      ['Brand', product.brand], ['Subcategory', product.subcategory], ['Series', product.series], ['Product Type', product.product_type], ['Model / Code', product.model_number || product.product_code], ['Technology', product.technology],
+      ['Stages', product.stages], ['Capacity', product.capacity],
+      ['Mounting', product.mounting], ['Power', product.power],
+      ['Water Source', product.water_source], ['Material', product.material],
+      ['Warranty', product.warranty]
+    ].filter(function(s) { return s[1] && s[1] !== 'N/A'; });
+
+    document.getElementById('productLayout').innerHTML =
+      '<div class="img-section">' +
+        '<div class="main-img zoomable" id="mainImg" onclick="zoomCurrentImage()" title="Click to zoom">' +
+          '<img src="' + variant.image + '" alt="' + escAttr(product.name) + '" onerror="this.parentElement.innerHTML=\'💧\'"/>' +
+        '</div>' +
+        '<div class="thumb-row">' + thumbs + '</div>' +
+      '</div>' +
+      '<div class="info-section">' +
+        '<span class="prod-brand-tag">' + product.brand + '</span>' +
+        '<h1 class="prod-title">' + product.name + '</h1>' +
+        '<div class="prod-cat-row">Category: <a href="products.html?cat=' + slug + '">' + product.category + '</a></div>' +
+        '<div class="prod-enquiry">Enquire for availability</div>' +
+        '<div class="prod-availability' + (product.in_stock ? '' : ' out') + '">' +
+          (product.in_stock ? tt('inStock') : tt('outStock')) +
+        '</div>' +
+        '<div class="trust-row">' +
+          '<span class="trust-badge" data-i18n="trustGenuine">✅ 100% Genuine</span>' +
+          '<span class="trust-badge" data-i18n="trustDelivery">🚚 Same-day Delivery</span>' +
+          '<span class="trust-badge" data-i18n="trustInstall">🔧 Free Installation</span>' +
+          '<span class="trust-badge" data-i18n="trustWarranty">🛡️ Brand Warranty</span>' +
+        '</div>' +
+        (product.variants.length > 1 ?
+          '<div class="color-section"><label>Colour</label><div class="cd-row" id="colorDots">' + colorDots + '</div><div class="color-name" id="colorName">' + variant.color + '</div></div>' : '') +
+        '<div class="order-section">' +
+          '<h4>Order Now</h4>' +
+          '<div class="qty-row"><label>Quantity:</label>' +
+            '<div class="qty-input">' +
+              '<button class="qty-btn" type="button" onclick="changeQty(-1)">−</button>' +
+              '<input class="qty-num" id="qty" value="1" readonly/>' +
+              '<button class="qty-btn" type="button" onclick="changeQty(1)">+</button>' +
+            '</div></div>' +
+          '<button class="btn-add-cart" type="button" onclick="addCurrentToCart()">🛒 <span data-i18n="pdAddCart">Add to Cart</span></button>' +
+          '<button class="btn-order-wa" type="button" onclick="orderWA()">💬 <span data-i18n="cartOrder">Order on WhatsApp</span></button>' +
+          '<a href="tel:+919265560630" class="btn-call-order">📞 Call to Order — +91 92655 60630</a>' +
+          '<div style="text-align:center;margin-top:12px;">' +
+            '<button class="btn-share" type="button" onclick="shareProduct(\'' + escAttr(product.name) + '\')" data-i18n="shareBtn">📤 Share</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="specs-card"><h4>Key Specifications</h4>' +
+          specs.map(function(s) { return '<div class="spec-row"><span class="spec-key">' + s[0] + '</span><span class="spec-val">' + s[1] + '</span></div>'; }).join('') +
+        '</div>' +
+      '</div>';
+
+    var featuresHtml = product.features && product.features.length
+      ? '<ul>' + product.features.map(function(f) { return '<li>' + f + '</li>'; }).join('') + '</ul>' : '';
+    var boxHtml = product.box_contents && product.box_contents.length
+      ? '<p style="margin-top:14px;font-size:13px;color:var(--gray-600);"><strong>Box Contents:</strong> ' + product.box_contents.join(', ') + '</p>' : '';
+
+    document.getElementById('descSection').innerHTML =
+      '<div class="desc-card"><h4>Product Description</h4><p>' + product.description + '</p>' + featuresHtml + boxHtml + '</div>';
+
+    renderRelated(product);
+    applyLang();
+  }
+
+  function selectVariant(index) {
+    if (!currentProduct) return;
+    selectedVariant = index;
+    const variant = currentProduct.variants[index];
+    const mainImg = document.getElementById('mainImg');
+    if (mainImg) {
+      mainImg.innerHTML = '<img src="' + variant.image + '" alt="' + escAttr(currentProduct.name) + '" onerror="this.parentElement.innerHTML=\'💧\'"/>';
+    }
+    document.querySelectorAll('.thumb').forEach(function(t, i) { t.classList.toggle('active', i === index); });
+    document.querySelectorAll('.cd').forEach(function(d, i) { d.classList.toggle('active', i === index); });
+    var colorName = document.getElementById('colorName');
+    if (colorName) colorName.textContent = variant.color;
+  }
+
+  function renderRelated(product) {
+    const related = allProducts.filter(function(p) {
+      return p.id !== product.id && p.category === product.category;
+    }).slice(0, 4);
+    if (!related.length) return;
+    document.getElementById('relatedSection').style.display = 'block';
+    document.getElementById('relatedGrid').innerHTML = related.map(function(p) {
+      const img = p.variants[0].image;
+      return '<div class="prod-card" onclick="location.href=\'product-detail.html?id=' + p.id + '\'">' +
+        '<div class="prod-img"><img src="' + img + '" alt="' + escAttr(p.name) + '" loading="lazy" onerror="this.parentElement.innerHTML=\'💧\'"/></div>' +
+        '<div class="prod-body"><div class="prod-brand">' + p.brand + '</div>' +
+        '<div class="prod-name">' + p.name + '</div>' +
+        '<div class="prod-enquiry">Enquire for availability</div>' +
+        '<div class="prod-actions">' +
+          '<button class="btn-cart-sm" onclick="event.stopPropagation();relatedCartAdd(' + p.id + ')">' + tt('addCart') + '</button>' +
+          '<button class="btn-view" onclick="event.stopPropagation();location.href=\'product-detail.html?id=' + p.id + '\'">' + tt('view') + '</button>' +
+        '</div></div></div>';
+    }).join('');
+  }
+
+  function relatedCartAdd(id) {
+    var p = allProducts.find(function(x) { return x.id === id; });
+    if (!p) return;
+    addToCart({ id: p.id, name: p.name, brand: p.brand, color: p.variants[0].color || '', variantIdx: 0, image: p.variants[0].image, qty: 1 });
+  }
+
+  function changeQty(d) {
+    var q = document.getElementById('qty');
+    var v = parseInt(q.value, 10) + d;
+    if (v >= 1) q.value = v;
+  }
+
+  function zoomCurrentImage() {
+    if (!currentProduct) return;
+    openLightbox(currentProduct.variants[selectedVariant].image);
+  }
+
+  function addCurrentToCart() {
+    if (!currentProduct) return;
+    var qty = parseInt(document.getElementById('qty').value, 10) || 1;
+    var v = currentProduct.variants[selectedVariant];
+    addToCart({
+      id: currentProduct.id, name: currentProduct.name, brand: currentProduct.brand,
+      color: v.color || '', variantIdx: selectedVariant, image: v.image, qty: qty
+    });
+  }
+
+  function orderWA() {
+    if (!currentProduct) return;
+    var qty = document.getElementById('qty').value;
+    var variant = currentProduct.variants[selectedVariant];
+    openWhatsApp(
+      'Hello, I am interested in this product:\n\nProduct: ' + currentProduct.name +
+      '\nColour: ' + variant.color +
+      '\nQuantity: ' + qty +
+      '\n\nPlease confirm availability and delivery details.'
+    );
+  }
+
+  async function init() {
+    var params = new URLSearchParams(window.location.search);
+    var id = parseInt(params.get('id'), 10);
+    if (!id) { showNotFound(); return; }
+    try {
+      var res = await fetch('products.json');
+      allProducts = await res.json();
+      var product = allProducts.find(function(p) { return p.id === id; });
+      if (!product) { showNotFound(); return; }
+      renderProduct(product);
+      trackRecentlyViewed(product.id);
+      renderRecentlyViewed('recentGrid', allProducts, product.id);
+    } catch (e) {
+      showNotFound();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
